@@ -26,7 +26,7 @@ import { onMounted, ref } from 'vue';
  </script>
 
 <template>
-  <main class="w-full">
+  <main class="w-full bg-black">
     <HeroSection :link="game?.title" :src="game?.image_url" :alt="game?.title"/>
   </main>
 </template>
