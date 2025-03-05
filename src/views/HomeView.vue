@@ -40,9 +40,9 @@ import { onMounted, ref } from 'vue';
 
 <template>
   <main class="w-full bg-black">
-    <HeroSection :link="gameDaily?.title" :src="gameDaily?.image_url" :alt="gameDaily?.title"/>
+    <HeroSection :data="gameDaily"/>
 
-    <div class="w-full bg-slate-900 py-12">
+    <div class="w-full bg-zinc-900 py-12">
 
       <h2 class="text-slate-200 text-3xl text-center mb-11">Jogos para conhecer</h2>
 

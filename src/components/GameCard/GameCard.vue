@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { defineProps } from 'vue';
   import type { GameProps } from '@/utils/types/game.type';
+import { RouterLink } from 'vue-router';
 
   defineProps<{
     data:GameProps
@@ -15,7 +16,11 @@
       </div>
       <div class="flex items-center justify-between mt-4">
         <div class="text-sm font-bold px-2 text-black text-ellipsis truncate whitespace-nowrap overflow-hidden">
-          <p>{{ data.title }}</p>
+          <RouterLink
+            class="flex items-center gap-2"
+            :to="`/games/${data.id}`"
+          >{{ data.title }}<i class="pi pi-arrow-circle-right mr-2"></i></RouterLink>
+
         </div>
       </div>
     </section>
